@@ -47,7 +47,7 @@ public:
 	
 private:
 	UPROPERTY()
-	int Health;
+	int Health = MAX_HEALTH_VALUE;
 
 protected:
 
@@ -55,8 +55,7 @@ protected:
 	void Move(const FInputActionValue& Value);
 
 	/** Called for looking input */
-	void Look(const FInputActionValue& Value);
-			
+	void Look(const FInputActionValue& Value);	
 
 protected:
 	// APawn interface
@@ -78,5 +77,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	int GetHealth() { return Health; }
+
+	UFUNCTION(BlueprintCallable)
+	bool IsDead();
 };
 
