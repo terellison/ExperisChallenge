@@ -124,24 +124,6 @@ void AExperisChallengeCharacter::Look(const FInputActionValue& Value)
 	}
 }
 
-void AExperisChallengeCharacter::SetHealth(int value)
-{
-	if (value < 0)
-	{
-		Health = 0;
-	}
-
-	else if (value > MAX_HEALTH_VALUE)
-	{
-		Health = MAX_HEALTH_VALUE;
-	}
-
-	else
-	{
-		Health = value;
-	}
-}
-
 bool AExperisChallengeCharacter::IsDead()
 {
 	return Health == 0 ? true : false;

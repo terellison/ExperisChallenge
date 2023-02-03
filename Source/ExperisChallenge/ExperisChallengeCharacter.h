@@ -46,8 +46,7 @@ public:
 	FORCEINLINE int GetMaxHealthValue() { return MAX_HEALTH_VALUE; }
 	
 private:
-	UPROPERTY()
-	int Health = MAX_HEALTH_VALUE;
+	
 
 protected:
 
@@ -73,12 +72,12 @@ public:
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
 	UFUNCTION(BlueprintCallable)
-	void SetHealth(int value);
-
-	UFUNCTION(BlueprintCallable)
 	int GetHealth() { return Health; }
 
 	UFUNCTION(BlueprintCallable)
 	bool IsDead();
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int Health = MAX_HEALTH_VALUE;
 };
 
