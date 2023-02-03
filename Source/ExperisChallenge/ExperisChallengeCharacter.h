@@ -72,9 +72,6 @@ public:
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
 	UFUNCTION(BlueprintCallable)
-	int GetHealth() { return Health; }
-
-	UFUNCTION(BlueprintCallable)
 	bool IsDead();
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
